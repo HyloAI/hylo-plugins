@@ -1,11 +1,11 @@
-from worldcurrent.eval.experiment import run_experiment
-from worldcurrent.core.config import ExperimentConfig
-from worldcurrent.evolve.candidate import Candidate, CandidateRegistry
-from worldcurrent.evolve.protocol import Archive, ProtocolConfig, run_cycle
-from worldcurrent.evolve.steering import diagnose_traces
-from wc_examples.stats import MinEffectMcNemar
+from hylo.eval.experiment import run_experiment
+from hylo.core.config import ExperimentConfig
+from hylo.evolve.candidate import Candidate, CandidateRegistry
+from hylo.evolve.protocol import Archive, ProtocolConfig, run_cycle
+from hylo.evolve.steering import diagnose_traces
+from hylo_examples.stats import MinEffectMcNemar
 
-# Unit tests run on the test double (worldcurrent.testing); the example configs (MuJoCo) are run by test_examples.py.
+# Unit tests run on the test double (hylo.testing); the example configs (MuJoCo) are run by test_examples.py.
 DOUBLE = ExperimentConfig(name="double", benchmark={"type": "testing/reach-v0", "params": {"tags": ["reach"]}},
                           env={"type": "testing.point_reach"}, agent={"type": "testing.p_controller", "params": {"kp": 2.0}},
                           safety={"max_delta": 0.25})

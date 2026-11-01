@@ -1,7 +1,7 @@
-# Online learning as a candidate generator: the CEM learner (packages/wc-plugin-examples) searches the controller
+# Online learning as a candidate generator: the CEM learner (packages/hylo-plugin-examples) searches the controller
 # gain by rolling out on the search split, seals its result with every rollout run in the provenance, and the
 # proposer turns the best gain into a candidate that the gate judges on unseen init states.
-schema_version: wc.evolve/v0.1
+schema_version: hylo.evolve/v0.1
 name: mujoco-online-cem
 experiment: ../configs/mujoco_reach.yaml
 experiment_overrides: {benchmark.params: {protocol: rsi}, agent.params.kp: 0.02}

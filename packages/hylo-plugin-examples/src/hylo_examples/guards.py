@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from worldcurrent.core.safety import GuardVerdict, SafetyContext
+from hylo.core.safety import GuardVerdict, SafetyContext
 
 
 class SlowZoneGuard:

@@ -1,7 +1,7 @@
 # Guard plugins from the safety config (they run between the shield's mandatory finite and bounds checks).
-# examples.slow_zone comes from packages/wc-plugin-examples: a third-party package, no worldcurrent change.
+# examples.slow_zone comes from packages/hylo-plugin-examples: a third-party package, no Hylo change.
 # Here the fingertip slows to a quarter of its speed within 10 cm of the fixed target.
-schema_version: wc.experiment/v0.1
+schema_version: hylo.experiment/v0.1
 name: mujoco-guarded
 benchmark: {type: mujoco/reach-v0, split: validation}
 env: {type: mujoco.planar_reach}

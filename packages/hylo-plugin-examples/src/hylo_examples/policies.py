@@ -15,9 +15,9 @@ from typing import Any, Literal
 
 import numpy as np
 
-from worldcurrent.core.agent import AgentSpec, EpisodeContext
-from worldcurrent.core.policy import build_policy
-from worldcurrent.core.types import ActionSemantics, Observation
+from hylo.core.agent import AgentSpec, EpisodeContext
+from hylo.core.policy import build_policy
+from hylo.core.types import ActionSemantics, Observation
 
 
 class IKReacherPolicy:

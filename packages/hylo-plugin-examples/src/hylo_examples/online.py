@@ -22,7 +22,7 @@ from typing import Any
 
 import numpy as np
 
-from worldcurrent.core.artifact import ArtifactManifest, Provenance, write_manifest
+from hylo.core.artifact import ArtifactManifest, Provenance, write_manifest
 
 
 def _set(spec: dict[str, Any], path: str, value: float) -> None:
@@ -34,7 +34,7 @@ def _set(spec: dict[str, Any], path: str, value: float) -> None:
 
 
 class CEMLearner:
-    name = "wc_examples.cem@0.1"
+    name = "hylo_examples.cem@0.1"
 
     def start(self, job, agent: dict[str, Any]) -> None:
         p = dict(job.params)

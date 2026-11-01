@@ -1,18 +1,18 @@
-"""The plugins repository's example configs, on MuJoCo planar reach (worldcurrent-bench's wc-env-mujoco): run when
+"""The plugins repository's example configs, on MuJoCo planar reach (hylo-bench's hylo-env-mujoco): run when
 the bench is in the workspace, skipped otherwise."""
 
 from pathlib import Path
 
 import pytest
 
-pytest.importorskip("worldcurrent.envs.mujoco", reason="the examples run on worldcurrent-bench's MuJoCo environments")
+pytest.importorskip("hylo.envs.mujoco", reason="the examples run on hylo-bench's MuJoCo environments")
 
-from worldcurrent.core.config import ExperimentConfig  # noqa: E402
-from worldcurrent.core.registry import registry  # noqa: E402
-from worldcurrent.core.task import TaskInstance  # noqa: E402
-from worldcurrent.core.trace import TraceStore  # noqa: E402
-from worldcurrent.eval.experiment import run_experiment  # noqa: E402
-from worldcurrent.testing.conformance import check_policy  # noqa: E402
+from hylo.core.config import ExperimentConfig  # noqa: E402
+from hylo.core.registry import registry  # noqa: E402
+from hylo.core.task import TaskInstance  # noqa: E402
+from hylo.core.trace import TraceStore  # noqa: E402
+from hylo.eval.experiment import run_experiment  # noqa: E402
+from hylo.testing.conformance import check_policy  # noqa: E402
 
 EXAMPLES = Path(__file__).resolve().parents[3] / "examples"      # the plugins repository's examples/
 

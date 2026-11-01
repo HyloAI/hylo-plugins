@@ -1,0 +1,36 @@
+[project]
+name = "hylo-plugin-examples"
+version = "0.1.0.dev0"
+description = "Example third-party plugins for Hylo: one per extension point, each with a test and a config"
+requires-python = ">=3.10"
+dependencies = ["hylo-core", "hylo-eval", "hylo-learn", "hylo-agents", "numpy>=1.24"]
+license = "Apache-2.0"
+
+[project.entry-points."hylo.learners"]
+"examples.cem" = "hylo_examples.online:CEMLearner"
+
+[project.entry-points."hylo.gate_tests"]
+"examples.min_effect" = "hylo_examples.stats:MinEffectMcNemar"
+
+[project.entry-points."hylo.policies"]
+"examples.ik_reacher" = "hylo_examples.policies:IKReacherPolicy"
+"examples.mixture" = "hylo_examples.policies:MixturePolicy"
+
+[project.entry-points."hylo.guards"]
+"examples.slow_zone" = "hylo_examples.guards:SlowZoneGuard"
+
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hylo_examples"]
+
+[tool.uv.sources]
+hylo-core = { workspace = true }
+hylo-eval = { workspace = true }
+hylo-learn = { workspace = true }
+hylo-agents = { workspace = true }
+
+[project.entry-points."hylo.meta"]
+"hylo-plugin-examples" = "hylo_examples:META"

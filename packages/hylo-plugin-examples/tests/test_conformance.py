@@ -1,4 +1,4 @@
-from worldcurrent.cli.scaffold import check_plugin
+from hylo.cli.scaffold import check_plugin
 
 
 def test_the_example_plugins_pass_their_conformance_checks():

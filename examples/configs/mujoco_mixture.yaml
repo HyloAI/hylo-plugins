@@ -1,6 +1,6 @@
 # A mixture of two policies, steered: each of 4 seeded samples comes from one member (examples.mixture), and the
 # medoid proposal is executed. Members can be any registered policies (reference policies, LeRobot, your own).
-schema_version: wc.experiment/v0.1
+schema_version: hylo.experiment/v0.1
 name: mujoco-mixture
 benchmark: {type: mujoco/reach-v0, split: validation}
 env: {type: mujoco.planar_reach}
