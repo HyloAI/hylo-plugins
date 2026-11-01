@@ -1,5 +1,8 @@
 # hylo-plugins
 
+Part of [Hylo](https://hyloai.github.io/), the stack for physical AI. Plugins extend the **kernel** layer:
+policies, environments, learners, guards and gate tests, each registered through an entry point.
+
 Plugins written the way a third party would: separate packages that register entry points and never modify the
 harness. They show that each extension point can be used from outside, and serve as templates.
 
