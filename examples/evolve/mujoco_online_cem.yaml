@@ -3,7 +3,7 @@
 # proposer turns the best gain into a candidate that the gate judges on unseen init states.
 schema_version: wc.evolve/v0.1
 name: mujoco-online-cem
-experiment: examples/configs/mujoco_reach.yaml
+experiment: ../configs/mujoco_reach.yaml
 experiment_overrides: {benchmark.params: {protocol: rsi}, agent.params.kp: 0.02}
 proposer:
   type: learn

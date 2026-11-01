@@ -18,3 +18,5 @@ uv run wc plugin new policy my-policy --dir packages        # a new plugin packa
 The examples run on MuJoCo planar reach, so they need worldcurrent-bench (wc-env-mujoco) installed next to the
 harness; the unit tests use the harness's test double. Run from this repository. The extension points, their contracts and conformance checks: the harness's
 docs/extending.md.
+
+Documentation (worldcurrent-docs, `uv run mkdocs serve -f docs/mkdocs.yml` from the workspace): [extending](../harness/docs/extending.md) (also on the site), the plugin catalogue (generated from `wc plugins`).
