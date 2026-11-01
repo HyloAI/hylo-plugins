@@ -1,10 +1,36 @@
-# hylo-plugins
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner-dark.svg">
+    <img src=".github/assets/banner-light.svg" width="100%" alt="hylo-plugins: extend the kernel from outside: policies, environments, learners, guards and gate tests">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-c8442d?style=flat-square"></a>
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-171c22?style=flat-square&logo=python&logoColor=white">
+  <img alt="Registered through entry points" src="https://img.shields.io/badge/registered%20by-entry%20points-171c22?style=flat-square">
+  <img alt="5 example plugins" src="https://img.shields.io/badge/examples-5%20plugins-5b6168?style=flat-square">
+</p>
+
+<p align="center">
+  <a href="https://hyloai.github.io/"><b>Website</b></a> ·
+  <a href="https://hyloai.github.io/hylo-docs/"><b>Docs</b></a> ·
+  <a href="https://hyloai.github.io/hylo-docs/getting-started/quickstart/"><b>Quickstart</b></a> ·
+  <a href="https://github.com/HyloAI"><b>All repositories</b></a>
+</p>
 
 Part of [Hylo](https://hyloai.github.io/), the stack for physical AI. Plugins extend the **kernel** layer:
 policies, environments, learners, guards and gate tests, each registered through an entry point.
 
 Plugins written the way a third party would: separate packages that register entry points and never modify the
 harness. They show that each extension point can be used from outside, and serve as templates.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/flow-dark.svg">
+    <img src=".github/assets/flow-light.svg" width="100%" alt="A package declares an entry point in pyproject.toml; the plugin registry in hylo-core finds it by name with its contract version and maturity; configs use it by that name. This repository holds a guard, a gate test, an online learner and two policies">
+  </picture>
+</p>
 
 | Package | Plugins |
 |---|---|
@@ -23,6 +49,15 @@ harness; the unit tests use the harness's test double. Run from this repository.
 docs/extending.md.
 
 Documentation (hylo-docs, `uv run mkdocs serve -f docs/mkdocs.yml` from the workspace): [extending](../harness/docs/extending.md) (also on the site), the plugin catalogue (generated from `hylo plugins`).
+
+## The Hylo stack
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/stack-dark.svg">
+    <img src=".github/assets/stack-light.svg" width="100%" alt="The six layers of the Hylo stack; hylo-plugins extends the kernel">
+  </picture>
+</p>
 
 ## License
 
