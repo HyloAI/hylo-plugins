@@ -1,0 +1,11 @@
+# The gate's statistic is a plugin. Both gains always reach the target, so a success-based gate (McNemar) has no
+# discordant pairs; a sign test on steps (lower is better) promotes the faster one. Vetoes stay on success and
+# safety. Try {type: examples.min_effect, params: {min_effect: 0.1}} from packages/wc-plugin-examples as well.
+schema_version: wc.evolve/v0.1
+name: mujoco-steps-gate
+experiment: examples/configs/mujoco_reach.yaml
+experiment_overrides: {benchmark.params: {protocol: rsi}, agent.params.kp: 0.1}
+proposer: {type: rule.gain, params: {path: agent.params.kp, factors: [2.0]}}
+protocol: {gate_test: {type: sign, params: {metric: steps, direction: lower}}}
+cycles: 1
+out_dir: runs/evolve/mujoco-steps-gate

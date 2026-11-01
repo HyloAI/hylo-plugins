@@ -1,0 +1,15 @@
+# Guard plugins from the safety config (they run between the shield's mandatory finite and bounds checks).
+# examples.slow_zone comes from packages/wc-plugin-examples: a third-party package, no worldcurrent change.
+# Here the fingertip slows to a quarter of its speed within 10 cm of the fixed target.
+schema_version: wc.experiment/v0.1
+name: mujoco-guarded
+benchmark: {type: mujoco/reach-v0, split: validation}
+env: {type: mujoco.planar_reach}
+agent: {type: baseline.planar_ik, params: {kp: 0.3}}
+safety:
+  max_delta: 0.5
+  guards:
+    - {type: norm_limit, params: {max_norm: 1.2}}
+    - {type: examples.slow_zone, params: {state_key: tip_pos, center: [0.35, 0.2], radius: 0.1, factor: 0.25}}
+workers: 8
+output_dir: runs

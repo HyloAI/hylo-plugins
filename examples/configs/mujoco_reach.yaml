@@ -1,0 +1,8 @@
+# MuJoCo planar reach with the analytic IK controller: the experiment the plugin examples build on.
+schema_version: wc.experiment/v0.1
+name: mujoco-reach
+benchmark: {type: mujoco/reach-v0, split: validation}
+env: {type: mujoco.planar_reach}
+agent: {type: baseline.planar_ik, params: {kp: 0.3}}
+workers: 8
+output_dir: runs

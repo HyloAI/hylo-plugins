@@ -1,0 +1,18 @@
+# Online learning as a candidate generator: the CEM learner (packages/wc-plugin-examples) searches the controller
+# gain by rolling out on the search split, seals its result with every rollout run in the provenance, and the
+# proposer turns the best gain into a candidate that the gate judges on unseen init states.
+schema_version: wc.evolve/v0.1
+name: mujoco-online-cem
+experiment: examples/configs/mujoco_reach.yaml
+experiment_overrides: {benchmark.params: {protocol: rsi}, agent.params.kp: 0.02}
+proposer:
+  type: learn
+  params:
+    learner: examples.cem
+    online: true
+    out_root: runs/evolve/mujoco-online-cem/learned
+    params: {space: {kp: {path: params.kp, low: 0.01, high: 1.0, init: 0.05}}, population: 5, iterations: 3}
+    patch: {agent.params.kp: "{metrics.best.kp}"}
+    hypothesis: "a gain of {metrics.best.kp} found by CEM on the search split reaches more targets in time"
+cycles: 1
+out_dir: runs/evolve/mujoco-online-cem
