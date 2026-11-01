@@ -20,3 +20,7 @@ harness; the unit tests use the harness's test double. Run from this repository.
 docs/extending.md.
 
 Documentation (hylo-docs, `uv run mkdocs serve -f docs/mkdocs.yml` from the workspace): [extending](../harness/docs/extending.md) (also on the site), the plugin catalogue (generated from `hylo plugins`).
+
+## License
+
+Apache License 2.0 (see [LICENSE](LICENSE)). Copyright 2026 Hylo AI.
