@@ -9,7 +9,8 @@ as 1, so the gate does not promote.
 
 from __future__ import annotations
 
-from worldcurrent.eval.scoring import PairedComparison, paired_compare
+from worldcurrent.core.scoring import PairedComparison
+from worldcurrent.eval.scoring import paired_compare
 
 
 class MinEffectMcNemar:
