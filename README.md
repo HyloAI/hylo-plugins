@@ -25,6 +25,12 @@ policies, environments, learners, guards and gate tests, each registered through
 Plugins written the way a third party would: separate packages that register entry points and never modify the
 harness. They show that each extension point can be used from outside, and serve as templates.
 
+The same extension contracts support the [robot-skill lifecycle](https://hyloai.github.io/hylo-docs/user-guide/skills/):
+an agent can use robot tools, and a generator can
+propose program candidates for evaluation. Register implementations through the harness's entry points and keep
+robot and artifact formats in core contracts. The [development guide](https://hyloai.github.io/hylo-docs/user-guide/developing-strategies/)
+shows how these capabilities fit together; the examples here demonstrate the extension mechanism.
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset=".github/assets/flow-dark.svg">
@@ -42,6 +48,7 @@ uv run hylo evolve run examples/evolve/mujoco_steps_gate.yaml   # a gate on step
 uv run hylo evolve run examples/evolve/mujoco_online_cem.yaml   # an online learner as a candidate generator
 uv run hylo run examples/configs/mujoco_mixture.yaml            # a steered mixture of two policies
 uv run hylo plugin new policy my-policy --dir packages        # a new plugin package from a template
+uv run python examples/01_plugin_effects.py                 # each plugin with and without, measured (examples/README.md)
 ```
 
 The examples run on MuJoCo planar reach, so they need hylo-bench (hylo-env-mujoco) installed next to the
